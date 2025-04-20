@@ -1,0 +1,134 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Mi razón de vivir</title>
+    <style>
+        body {
+            background: #fff0f5;
+            font-family: 'Courier New', monospace;
+            color: #333;
+            text-align: center;
+            padding: 40px 10px;
+            margin: 0;
+        }
+
+        h1 {
+            font-size: 3em;
+            color: #c2185b;
+            margin-bottom: 10px;
+        }
+
+        .foto {
+            width: 90%;
+            max-width: 300px;
+            border-radius: 15px;
+            margin: 15px auto;
+            display: block;
+            box-shadow: 0 0 15px rgba(0,0,0,0.2);
+        }
+
+        .mensaje {
+            white-space: pre-wrap;
+            font-size: 1.2em;
+            line-height: 1.8em;
+            margin: 30px auto;
+            max-width: 800px;
+        }
+
+        button {
+            padding: 10px 25px;
+            font-size: 1em;
+            background-color: #f06292;
+            border: none;
+            border-radius: 8px;
+            color: white;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+
+        .corazon {
+            position: fixed;
+            width: 20px;
+            height: 20px;
+            background-color: red;
+            transform: rotate(45deg);
+            animation: flotar 6s infinite ease-in-out;
+        }
+
+        .corazon::before,
+        .corazon::after {
+            content: "";
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            background-color: red;
+            border-radius: 50%;
+        }
+
+        .corazon::before {
+            top: -10px;
+            left: 0;
+        }
+
+        .corazon::after {
+            top: 0;
+            left: -10px;
+        }
+
+        @keyframes flotar {
+            0% {
+                transform: translateY(100vh) rotate(45deg);
+                opacity: 0;
+            }
+            50% {
+                opacity: 1;
+            }
+            100% {
+                transform: translateY(-10vh) rotate(45deg);
+                opacity: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>Mi razón de vivir</h1>
+
+    <img src="foto1.jpg" alt="El inicio de todo" class="foto">
+    <img src="foto2.jpg" alt="Mi niña hermosa" class="foto">
+    <img src="foto3.jpg" alt="Momentos contigo" class="foto">
+
+    <div class="mensaje">
+        Le agradezco mucho a Dios... porque unió nuestras vidas desde ese 20 de abril del 2024, un día inolvidable mi nena. Desde ahí comencé a amarte y quererte tanto. Fue raro, pero sin duda muy bonito ese día.
+
+        Al principio tenía mucho miedo, tú ya sabes de qué cosas mi amorcito. Desde que nos conocemos tenemos buena química, y día con día crecemos más.
+
+        Gracias por tu fidelidad, tu amor incondicional y tu respeto mi vida. Gracias por amarme tanto como yo te amo a ti.
+
+        Perdón por no ir a verte hoy mi niña, pero estoy muy feliz por nuestro primer año de muchos más. Siempre estoy mejorando para ti.
+
+        Amo tus dramas, berrinches, tus bromas... hasta cuando te pasas jajaja. Acostúmbrate a mis locuras también, porque pienso seguir haciéndolas.
+
+        Ya un año contigo, la mejor persona del mundo... tú.
+
+        Estamos hechos por Dios, y este año es solo el primer fruto de nuestro gran amor.
+
+        Te amo mucho mi vida hermosa. ¡Ya falta poco para casarnos!
+
+        Indio amar mucho a india cada día más.
+    </div>
+
+    <button onclick="alert('¡Te amo más de lo que las palabras pueden decir!')">Presiona si tú también me amas</button>
+
+    <script>
+        for (let i = 0; i < 20; i++) {
+            let heart = document.createElement("div");
+            heart.className = "corazon";
+            heart.style.left = Math.random() * 100 + "vw";
+            heart.style.animationDelay = Math.random() * 5 + "s";
+            document.body.appendChild(heart);
+        }
+    </script>
+</body>
+</html>
